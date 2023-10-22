@@ -14,15 +14,14 @@ const albums = await fetch("https://astrological-api.fly.dev/music/albums");
 const albumsData = (await albums.json()) as AlbumData;
 ---
 
-<Layout title="Jason (uchks)" subtitle="20 year old Artist">
+<Layout title="jason (uchks)" subtitle="20 years old. Artist & Aspiring Developer.">
   <div class="mt-6 grid grid-cols-4 gap-4 md:gap-8">
     <div class="col-span-4 md:col-span-2">
       <Card title="Intro" titleIcon="tabler:face-id">
-        Hi there! My name is Jason (uchks), and I'm a 20 year old
+        Hi there! My name is Jason, also known as uchks, and I'm a 20 year old
         who primarily does digital design. I occasionally take pictures
         on a Canon EOS Rebel T5, and do render tests on videos. My main focus right now is
-        <strong>unethical.</strong> A lot of my developmental projects are made under unethical.
-        Including my Lunar Client utility work, such as lcbud, multiverproxy, and lccll.sh.
+        <strong>unethical.</strong>
       </Card>
     </div>
     <div class="col-span-4 md:col-span-1">
@@ -31,7 +30,7 @@ const albumsData = (await albums.json()) as AlbumData;
           albumsData.albums.slice(0, 3).map((album) => {
             return (
               <div class="flex">
-                <img src={album.image} class="h-6 rounded-lg" /> {album.album}
+                <img src={album.image} class="h-6 rounded-lg" /> ‎ {album.album}
               </div>
             );
           })
@@ -86,10 +85,9 @@ const albumsData = (await albums.json()) as AlbumData;
         subtitleIcon={"tabler:arrow-up-right"}
         subtitleHref={`/projects`}
       >
-        <div>unethical - a bunch of projects likely considered unethical.</div>
-        <div>astrological - this website, a fork of landscape by Jack LaFond.</div>
-        <div>malware remover - a p.o.c. chrome extension for removing malware (a la chrome_zoom).</div>
-        <div>lccll.sh - a fork of flags.sh for generating a script to run Lunar Client via CLI.</div>
+        <div><strong>unethical</strong> - a bunch of projects likely considered unethical.</div>
+        <div><strong>astrological</strong> - this website, a fork of landscape by Jack LaFond.</div>
+        <div><strong>malware remover</strong> - a p.o.c. chrome extension for removing malware (a la chrome_zoom).</div>
       </Card>
     </div>
   </div>

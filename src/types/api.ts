@@ -14,7 +14,7 @@ export interface AlbumData {
 }
 
 interface Album {
-  album: string;
+  album:  string;
   artist: string;
   image: string;
   plays: string;

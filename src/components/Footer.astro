@@ -27,15 +27,14 @@ const activityData = (await activity.json()) as any;
 ---
 
 <footer
-  class="absolute bottom-0 w-full border-t md:flex grid justify-center md:justify-between p-4 xl:pr-[7rem] xl:pl-[7rem]"
+  class="absolute bottom-0 w-full md:flex grid justify-center md:justify-between p-4 xl:pr-[7rem] xl:pl-[7rem]"
 >
   <div class="flex justify-center md:justify-start">
     <FooterActivity streaming={streamingData} presence={activityData} />
   </div>
   <div class="flex gap-3 justify-center md:justify-end">
-    <p class="flex gap-2 text-gray-10 hover:text-gray-12 transition-colors duration-200">Made with ❤️ by Jack LaFond</p>
-  </div>
-  <div class="flex gap-3 justify-center md:justify-end">
+    <a href="https://github.com/jacc/landscape" class="flex gap-3 text-gray-10 hover:text-gray-12 transition-colors duration-200">Made with ❤️ by Jack LaFond</a>
+    <p class="flex gap-3 text-gray-10 transition-colors duration-200">|</p>
     {
       socials.map((social) => {
         return (
