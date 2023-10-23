@@ -41,13 +41,11 @@ function getCodingActivity(presenceData: any): RenderedActivity {
 
 function getWatchingActivity(presenceData: any): RenderedActivity {
   return {
-    text: presenceData.watching.state && presenceData.watching.details
-      ? `Watching ${presenceData.watching.details} - ${presenceData.watching.state}`
-      : presenceData.watching.details
-        ? `Watching ${presenceData.watching.details}`
-        : `Watching ${presenceData.watching.state}`,
+    text: `Watching ${presenceData.watching.details} - ${
+      presenceData.watching.state
+    }`,
     icon: "tabler:brand-funimation",
-    color: "text-orange-11",
+    color: "text-violet-11",
   };
 }
 
