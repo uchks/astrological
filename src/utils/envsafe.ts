@@ -5,8 +5,9 @@ export const env = envsafe({
     devDefault: "development",
     choices: ["development", "staging", "production"],
   }),
-  OURA: str(),
   STEAM_KEY: str(),
   STEAM_ID: str(),
+  LASTFM_USER: str(),
   LASTFM_TOKEN: str(),
+  DISCORD_ID: str(),
 });

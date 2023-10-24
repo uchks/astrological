@@ -50,10 +50,10 @@ const FooterActivity: React.FC<Props> = ({ streaming, presence }) => {
   const renderedActivity: RenderedActivity = streaming?.streaming
     ? getStreamingActivity(streaming)
     : presence?.coding
-    ? getCodingActivity(presence)
-    : presence?.watching
-    ? getWatchingActivity(presence)
-    : getDefaultActivity();
+      ? getCodingActivity(presence)
+      : presence?.watching
+        ? getWatchingActivity(presence)
+        : getDefaultActivity();
 
   return (
     <span className={`${renderedActivity.color} flex items-center gap-1`}>
