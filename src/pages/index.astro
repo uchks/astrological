@@ -32,7 +32,7 @@ const albumsData = (await albums.json()) as AlbumData;
           albumsData.albums.slice(0, 3).map((album) => {
             return (
               <div class="flex">
-                <img src={album.image} class="h-6 rounded-lg" /> ‎ {album.album}
+                <img src={album.image} class="h-6 rounded-lg" loading="lazy" /> ‎ {album.album}
               </div>
             );
           })

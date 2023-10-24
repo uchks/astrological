@@ -1,9 +1,10 @@
 ---
+import { IconHome2 } from "@tabler/icons-react";
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
   {
-    name: "Home",
+    icon: IconHome2,
     href: "/",
   },
   {
@@ -25,6 +26,7 @@ const navLinks = [
             }`}
             transition:animate="fade"
           >
+            {link.icon ? <link.icon /> : null}
             {link.name}
           </a>
         );
@@ -32,3 +34,4 @@ const navLinks = [
     }
   </div>
 </div>
+
